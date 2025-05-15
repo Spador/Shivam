@@ -1,112 +1,109 @@
-# Hi there, I'm Shivam Parashar
+---
+title: "Shivam Parashar "
+description: "Software Engineer | DevOps |Cloud Enthusiast"
+---
 
-> **Software Engineer | Data Enthusiast | Cloud Architect**  
-> RIT Computer Science '25
+# Shivam Parashar 👋
 
-Welcome to my portfolio! I'm passionate about building scalable, data‑driven systems on the cloud. Here you'll find my background, key projects, and links to connect.
+**Software Engineer | Cloud & Container Specialist**  
+📍 Rochester, NY (Open to Relocate)  
+✉️ [sp3466@rit.edu](mailto:sp3466@rit.edu) | 📞 +1 (585) 481‑9419  
+🔗 [LinkedIn](https://www.linkedin.com/in/shivam-parashar-2764ba113) | [GitHub @Spador](https://github.com/Spador)
 
 ---
 
-## About Me
+## 🔍 Objective
 
-- **Master of Science, Computer Science** — Rochester Institute of Technology (May 2025)  
-- **3 years at Deloitte**, architecting cloud & data solutions for Fortune 500 clients  
-- **Core strengths:** AWS, Kubernetes, Terraform, Python, ML & data visualization  
-- **Currently exploring:** AI‑based traffic optimization, graph databases, real‑time analytics  
-- **Let's connect:**  
-  - [LinkedIn](https://www.linkedin.com/in/shivam-parashar-2764ba113)  
-  - [GitHub @Spador](https://github.com/Spador)  
-  - ✉️ sp3466@rit.edu  
+Software/DevOps Engineer with about 3 years at Deloitte consulting on AWS & OCI, specializing in containerization, CI/CD pipelines, and infrastructure as code. Seeking roles to drive automation, scalability, and resilience in cloud-native environments.
 
 ---
 
-## Skills
+## 🛠 Skills
 
-| Category               | Tools & Technologies                                           |
-|------------------------|----------------------------------------------------------------|
-| **Languages**          | Python, Java, SQL, C/C++, Shell Scripting                     |
-| **Frameworks & Libs**  | Pandas, NumPy, TensorFlow, Scikit‑Learn, NLTK, Matplotlib      |
-| **Cloud & DevOps**     | AWS (EC2, Lambda, DynamoDB, S3, API Gateway), OCI, Terraform, Kubernetes, Docker, Jenkins, GitHub Actions |
-| **Databases**          | PostgreSQL, MongoDB, Neo4j, GraphQL, Cypher                   |
-| **BI & Visualization** | Tableau, Power BI, Matplotlib, Seaborn, Folium                |
-| **Other Tools**        | Git/GitHub, IntelliJ, PyCharm, VS Code, Jira                  |
+- **Languages & Databases:** Python, Java, SQL, C/C++, Shell/Bash; PostgreSQL, MongoDB, Neo4j (Cypher)  
+- **Data & ML:** Pandas, NumPy, TensorFlow, Scikit‑Learn, NLTK, Matplotlib, Seaborn, Folium  
+- **Cloud & Infra:** AWS (IAM, S3, EC2, Lambda, DynamoDB, API Gateway), OCI; Docker, Kubernetes, Terraform  
+- **CI/CD & DevOps:** Jenkins, GitLab CI, GitHub Actions; Ansible; REST APIs, JSON; Git, Jira  
+- **BI & Visualization:** Tableau, Power BI, Excel  
+- **Environments & IDEs:** Linux/Unix, Windows, macOS; VS Code, IntelliJ, PyCharm  
 
 ---
 
-## Professional Experience
+## 💼 Professional Experience
 
-### Rochester Institute of Technology  
-**Course Assistant, Software Development & Problem Solving (Java)**  
-*Jan 2024 – Present, Rochester, NY*  
-- Tutored 50+ students weekly in Java programming, debugging, and algorithms  
-- Co‑created lab exercises and review sessions on OOP concepts, boosting pass rate by 15%
+### Software/DevOps Engineer  
+**Deloitte Consulting USI** — Gurugram, India  
+*Aug 2019 – Dec 2021*  
+- Designed, maintained, and delivered 10+ AWS & OCI databases, automating monitoring alerts for 24/7 reliability.  
+- Built 15+ interactive Tableau & Power BI dashboards, accelerating stakeholder decisions.  
+- Integrated Java microservices into Jenkins CI/CD pipelines, reducing deployment time by 30%.  
+- Automated sandbox environments: Python‑scripted Terraform to spin up Docker containers on Kubernetes, cutting provisioning by 40%.  
+- Managed JIRA dashboards to track bugs and tasks, improving transparency and sprint delivery.  
+- Actively participated in Agile ceremonies, adapting to changing requirements and ensuring timely releases.  
 
-### Deloitte Consulting USI  
-**Business Technology Analyst | Application Associate**  
-*Aug 2019 – Dec 2021, Gurugram, India*  
-- Designed & managed 10+ AWS/OCI databases for healthcare, finance, and retail clients  
-- Built 15+ Tableau/Power BI dashboards, accelerating decision-making by 30%  
-- Developed predictive models on cloud pipelines, increasing accuracy by 20%  
-- Automated CI/CD with Terraform & Jenkins, reducing deployment time by 40%  
-- Led client training, improving cloud data utilization by 25%
+### Data Scientist Intern  
+**I3CLogic Technologies Pvt. Ltd.** — Noida, India  
+*May 2018 – Jun 2018*  
+- Optimized Call Data Record processing in Pandas, reducing load time by 48%.  
+- Developed a Python ML model (92.7% accuracy) to impute missing CDR values, boosting data completeness.  
+- Created data visualizations to surface insights and inform strategic decisions.  
 
-### I3CLogic Technologies Pvt. Ltd.  
-**Data Scientist Intern**  
-*May 2018 – Jun 2018, Noida, India*  
-- Processed CDR data with Pandas, cutting load time by 48%  
-- Built an ML model for CDR imputation (92.7% accuracy), enhancing data completeness  
-
-### Oracle  
-**Data Analyst Intern**  
-*May 2017 – Jul 2017, Pune, India*  
-- Optimized SQL queries & warehouse processes, improving efficiency by 19%  
-- Managed Oracle DB & WebLogic, reducing integration issues by 8%
+### Software Engineer (Backend) Intern  
+**Oracle** — Pune, India  
+*May 2017 – Jul 2017*  
+- Developed Java-based REST endpoints on Oracle WebLogic, cutting integration errors by 8%.  
+- Tuned PL/SQL queries with indexes and views, reducing report generation time by 19%.  
+- Gained expertise in SQL and data analytics to drive business outcomes.  
 
 ---
 
-## Education
-
-- **M.S. in Computer Science**, Rochester Institute of Technology — May 2025  
-  Relevant coursework: Advanced OOP, Algorithms, Big Data Analytics, AI/ML, Cryptography, Computer Vision  
-- **B.Tech in CSE**, Vellore Institute of Technology — June 2019  
-  Relevant coursework: Data Mining, NLP, DSA, Image Processing, Data Visualization  
-
----
-
-## Personal Projects
+## 🚀 Personal Projects
 
 ### Traffic Flow Optimization using AI & Cloud  
-*Jan 2025 – Present*  
-- Built a real-time ML pipeline on AWS to reduce urban traffic congestion  
-- Modeled traffic network in Neo4j; optimized signal timings with graph algorithms  
+*Jan 2025 – May 2025*  
+- Built SUMO simulation ingesting OpenStreetMap for 10K+ vehicles; implemented RL rerouting agent to alleviate congestion.  
+- Automated CSV-based metrics: 25% lower wait time, 18% CO₂ reduction, 30% throughput gain.  
+- Planning AWS Kinesis & Lambda integration for real‑time scalability.
 
 ### Curriculum Management System  
 *Aug 2024 – Dec 2024*  
-- Full‑stack app (Spring Boot + React + Neo4j) for course & lesson management  
-- Implemented RBAC and GraphQL/Cypher queries for dynamic data retrieval  
+- Engineered full‑stack Spring Boot (REST, RBAC) + React + Neo4j app for course & lesson management.  
+- Modeled graph schema in Neo4j; optimized Cypher queries for 40% faster retrieval.
 
 ### NYC Crash Map Data Mining & Visualization  
 *Jan 2024 – May 2024*  
-- Cleaned & clustered large crash datasets; improved data accuracy by 30%  
-- Created interactive Folium maps and 50+ heatmaps/bar charts for pattern analysis  
-
-### Reproducibility Study of Aquila Optimizer  
-*Feb 2024 – May 2024*  
-- Re-implemented AO with 4 hunting strategies; achieved 15% better fitness & 60% faster convergence  
-- Benchmarked against 10 algorithms using Python & MEALPY  
+- Cleaned & filtered crash datasets; improved accuracy by 30%, processing speed by 25%.  
+- Applied K‑means clustering and built interactive Folium maps with heatmaps and bar charts to reveal accident hotspots.
 
 ---
 
-## Certifications
+## 📜 Certifications
 
-- Oracle SQL Fundamentals (1Z0-071)  
-- Oracle WebLogic Middleware Administrator (1Z0-062)  
+- Oracle SQL Fundamentals (1Z0‑071)  
+- Oracle WebLogic Middleware Administrator (1Z0‑062)  
 
 ---
 
-## How to Explore
+## 🎓 Education
 
-1. **Clone**  
-   ```bash
-   git clone https://github.com/Spador/portfolio.git
-   ```
+**M.S. in Computer Science**  
+Rochester Institute of Technology — May 2025 (GPA: 3.8)  
+Teaching Assistant: Data Structures & Algorithms (CSCI 141/242)
+
+**B.Tech in Computer Science & Engineering**  
+Vellore Institute of Technology — June 2019  
+
+---
+
+## 📫 Contact & Next Steps
+
+Feel free to:
+
+- **Email**: [sp3466@rit.edu](mailto:sp3466@rit.edu)  
+- **Connect**: [LinkedIn](https://www.linkedin.com/in/shivam-parashar-2764ba113)  
+- **Explore Code**: [GitHub @Spador](https://github.com/Spador)  
+
+Clone this portfolio:
+```bash
+git clone https://github.com/Spador/portfolio.git
+```
