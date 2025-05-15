@@ -1,6 +1,6 @@
 # Hi there, I’m Shivam Parashar 👋
 
-> **Software Engineer | Data Enthusiast | Cloud Architect**  
+> **Software Engineer | DevOps | Cloud and Data Enthusiast**  
 > RIT Computer Science ’25
 
 
