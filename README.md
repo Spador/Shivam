@@ -1,11 +1,11 @@
 ---
 title: "Shivam Parashar "
-description: "Software Engineer | DevOps |Cloud Enthusiast"
+description: "Software Engineer | DevOps | Cloud Enthusiast"
 ---
 
 # Shivam Parashar 👋
 
-**Software Engineer | Cloud & Container Specialist**  
+**Software Engineer | DevOps | Cloud Enthusiast**  
 📍 Rochester, NY (Open to Relocate)  
 ✉️ [sp3466@rit.edu](mailto:sp3466@rit.edu) | 📞 +1 (585) 481‑9419  
 🔗 [LinkedIn](https://www.linkedin.com/in/shivam-parashar-2764ba113) | [GitHub @Spador](https://github.com/Spador)
