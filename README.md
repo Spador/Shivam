@@ -1,9 +1,8 @@
----
-title: "Shivam Parashar "
-description: "Software Engineer | DevOps | Cloud Enthusiast"
----
+# Hi there, I’m Shivam Parashar 👋
 
-# Shivam Parashar 👋
+> **Software Engineer | Data Enthusiast | Cloud Architect**  
+> RIT Computer Science ’25
+
 
 **Software Engineer | DevOps | Cloud Enthusiast**  
 📍 Rochester, NY (Open to Relocate)  
@@ -12,13 +11,13 @@ description: "Software Engineer | DevOps | Cloud Enthusiast"
 
 ---
 
-## 🔍 Objective
+## Objective
 
-Software/DevOps Engineer with about 3 years at Deloitte consulting on AWS & OCI, specializing in containerization, CI/CD pipelines, and infrastructure as code. Seeking roles to drive automation, scalability, and resilience in cloud-native environments.
+Recent RIT M.S. in Computer Science graduate with 3 years of hands‑on experience at Deloitte Consulting, where I architected and automated AWS & OCI infrastructures, built CI/CD pipelines, and codified environments with Terraform. Eager to leverage my expertise in cloud‑native development, container orchestration, and DevOps best practices to deliver scalable, resilient software solutions as a Software Engineer.
 
 ---
 
-## 🛠 Skills
+## Skills
 
 - **Languages & Databases:** Python, Java, SQL, C/C++, Shell/Bash; PostgreSQL, MongoDB, Neo4j (Cypher)  
 - **Data & ML:** Pandas, NumPy, TensorFlow, Scikit‑Learn, NLTK, Matplotlib, Seaborn, Folium  
@@ -29,7 +28,7 @@ Software/DevOps Engineer with about 3 years at Deloitte consulting on AWS & OCI,
 
 ---
 
-## 💼 Professional Experience
+## Professional Experience
 
 ### Software/DevOps Engineer  
 **Deloitte Consulting USI** — Gurugram, India  
@@ -77,14 +76,14 @@ Software/DevOps Engineer with about 3 years at Deloitte consulting on AWS & OCI,
 
 ---
 
-## 📜 Certifications
+## Certifications
 
 - Oracle SQL Fundamentals (1Z0‑071)  
 - Oracle WebLogic Middleware Administrator (1Z0‑062)  
 
 ---
 
-## 🎓 Education
+## Education
 
 **M.S. in Computer Science**  
 Rochester Institute of Technology — May 2025 (GPA: 3.8)  
