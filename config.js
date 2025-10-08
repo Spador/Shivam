@@ -62,8 +62,8 @@ window.PORTFOLIO = {
   certifications: [
     {title:"AWS Certified Solutions Architect – Associate (SAA‑C03)", period:"Aug 2025 – Aug 2028", link:"https://www.credly.com/badges/f4a440de-4a0d-499a-9278-cfc97bc44dd9/public_url"},
     {title:"AWS Certified Cloud Practitioner (CLF‑C02)", period:"Jul 2025 – Jul 2028", link:"https://www.credly.com/badges/b2c32831-a4dc-45ab-b9ed-5dca0969ccb8/public_url"},
-    {title:"Oracle SQL Fundamentals (1Z0‑071)"},
-    {title:"Oracle WebLogic Middleware Administrator (1Z0‑062)"}
+    {title:"Oracle SQL Fundamentals (1Z0‑071)", link:"https://www.credly.com/badges/oracle-sql-fundamentals-1z0-071"},
+    {title:"Oracle WebLogic Middleware Administrator (1Z0‑062)", link:"https://www.credly.com/badges/oracle-weblogic-middleware-administrator-1z0-062"}
   ],
   projects: [
     {
