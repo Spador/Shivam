@@ -6,8 +6,8 @@ window.PORTFOLIO = {
   location: "Rochester, NY (Open to Relocate)",
   email: "sp3466@rit.edu",
   phone: "+1 (585) 481-9419",
-  github: "https://github.com/Spador",
-  linkedin: "https://linkedin.com/in/shivam-parashar1",
+  github: "http://github.com/spador",
+  linkedin: "http://linkedin.com/in/shivam-parashar1",
   resumeUrl: "assets/Shivam_Resume.pdf",
   summary: "M.S. Computer Science @ RIT (GPA 3.8). 3 years at Deloitte shipping cloud & data systems on AWS/OCI, CI/CD, and Terraform with measurable impact.",
   highlights: [
@@ -37,8 +37,8 @@ window.PORTFOLIO = {
       ]
     },
     {
-      role: "Data Scientist, Co‑op",
-      org: "I3C Logics Technologies",
+      role: "Data Scientist Intern",
+      org: "I3CLogic Technologies Pvt. Ltd.",
       period: "May 2018 – Jun 2018",
       bullets: [
         "Optimized CDR processing in Pandas (−48% load time).",
@@ -46,7 +46,7 @@ window.PORTFOLIO = {
       ]
     },
     {
-      role: "Software Engineer (Backend), Co‑op",
+      role: "Software Engineer (Backend) Intern",
       org: "Oracle",
       period: "May 2017 – Jul 2017",
       bullets: [
@@ -61,7 +61,7 @@ window.PORTFOLIO = {
   ],
   certifications: [
     {title:"AWS Certified Solutions Architect – Associate (SAA‑C03)", period:"Aug 2025 – Aug 2028", link:"https://www.credly.com/badges/f4a440de-4a0d-499a-9278-cfc97bc44dd9/public_url"},
-    {title:"AWS Certified Cloud Practitioner (CLF‑C02)", period:"Jul 2025 – Jul 2028"},
+    {title:"AWS Certified Cloud Practitioner (CLF‑C02)", period:"Jul 2025 – Jul 2028", link:"https://www.credly.com/badges/b2c32831-a4dc-45ab-b9ed-5dca0969ccb8/public_url"},
     {title:"Oracle SQL Fundamentals (1Z0‑071)"},
     {title:"Oracle WebLogic Middleware Administrator (1Z0‑062)"}
   ],
