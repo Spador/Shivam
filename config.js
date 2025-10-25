@@ -77,16 +77,22 @@ window.PORTFOLIO = {
   ],
   projects: [
     {
+      name: "Sidekick Agentic Coworker",
+      tags: ["Python","LangGraph","Gradio","OpenAI","Tooling"],
+      desc: "LangGraph-powered teammate with real-time tool execution, task evaluation, and a Gradio chat UI for collaborative software delivery.",
+      repo: "https://github.com/Spador/Sidekick"
+    },
+    {
       name: "CrewAI Multi-Agent Automations",
       tags: ["CrewAI","LangGraph","GenAI","Agents","CI/CD"],
       desc: "Architected 5+ multi-agent crews that debate, research finance, ship code, and scout stocks with reproducible YAML pipelines and MCP toolchains.",
       repo: "https://github.com/Spador/CrewAI_Projects"
     },
     {
-      name: "Sidekick Agentic Coworker",
-      tags: ["Python","LangGraph","Gradio","OpenAI","Tooling"],
-      desc: "LangGraph-powered teammate with real-time tool execution, task evaluation, and a Gradio chat UI for collaborative software delivery.",
-      repo: "https://github.com/Spador/Sidekick"
+      name: "Curriculum Management Platform",
+      tags: ["Spring Boot","React","Neo4j","RBAC","Auth"],
+      desc: "Secure curriculum management stack with Neo4j graph queries performing 40% faster and Spring Boot RBAC APIs for students, faculty, and admins.",
+      repo: "https://github.com/Spador/Neo4J-Curriculum-Management"
     },
     {
       name: "Deep Research Bot",
@@ -99,12 +105,6 @@ window.PORTFOLIO = {
       tags: ["Reinforcement Learning","SUMO","AWS","Bedrock"],
       desc: "Simulated 10k+ vehicle networks with SUMO and Bedrock-assisted RL rerouting to reduce wait times by 25% and emissions by 18%.",
       repo: ""
-    },
-    {
-      name: "Curriculum Management Platform",
-      tags: ["Spring Boot","React","Neo4j","RBAC","Auth"],
-      desc: "Secure curriculum management stack with Neo4j graph queries performing 40% faster and Spring Boot RBAC APIs for students, faculty, and admins.",
-      repo: "https://github.com/Spador/Neo4J-Curriculum-Management"
     },
     {
       name: "NYC Crash Data Mining & Visualization",
