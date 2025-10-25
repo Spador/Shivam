@@ -144,18 +144,18 @@ img{max-width:100%;display:block}
   position:absolute;
   inset:0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(229,9,20,.4), transparent 55%),
-    radial-gradient(circle at 80% 10%, rgba(229,9,20,.25), transparent 60%),
-    linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.95));
+    radial-gradient(circle at 20% 20%, rgba(109,76,255,.48), transparent 55%),
+    radial-gradient(circle at 78% 12%, rgba(34,16,64,.55), transparent 62%),
+    linear-gradient(180deg, rgba(3,0,10,.92), rgba(0,0,0,.95));
   z-index:0;
 }
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
-  background:url("assets/images/headshot.svg") center/cover no-repeat;
-  opacity:.1;
-  mix-blend-mode:screen;
+  background:url("assets/images/hero-bg-matrix.svg") center/520px repeat;
+  opacity:.2;
+  mix-blend-mode:lighten;
   z-index:0;
 }
 .hero-inner{
