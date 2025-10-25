@@ -1,110 +1,199 @@
 
 (function(){
   const $ = (sel, el=document)=>el.querySelector(sel);
-  const $$ = (sel, el=document)=>Array.from(el.querySelectorAll(sel));
-  const cfg = window.PORTFOLIO;
+  const cfg = window.PORTFOLIO || {};
 
-  // Typed effect
-  const typed = $("#typed");
-  const words = cfg.roleWords || [];
-  let wi=0, ci=0, dir=1;
-  function tick(){
-    const w = words[wi]||"";
-    ci += dir;
-    if(ci> w.length+5){ dir=-1; }
-    if(ci<0){ dir=1; wi=(wi+1)%words.length; ci=0; }
-    typed.textContent = w.slice(0, Math.max(0, Math.min(w.length, ci)));
+  const setText = (sel, value) => {
+    const el = typeof sel === "string" ? $(sel) : sel;
+    if(!el) return;
+    el.textContent = value || "";
+  };
+
+  const setLink = (id, href, options={})=>{
+    const el = document.getElementById(id);
+    if(!el) return;
+    if(!href){
+      el.removeAttribute("href");
+      return;
+    }
+    el.setAttribute("href", href);
+    if(options.download){
+      el.setAttribute("download", "");
+    }
+    if(options.blank){
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener");
+    }
+  };
+
+  const roleWords = Array.isArray(cfg.roleWords) ? cfg.roleWords : [];
+  const eyebrow = roleWords.length
+    ? `Open to ${roleWords.join(" • ")}`
+    : "Open to new possibilities";
+
+  setText("#heroTagline", eyebrow);
+  setText("#heroName", cfg.name);
+  setText("#summary", cfg.summary);
+  setText("#location", cfg.location);
+  setText("#phone", cfg.phone);
+
+  const email = cfg.email || "";
+  const emailEl = $("#email");
+  if(emailEl){
+    emailEl.textContent = email;
+    emailEl.href = email ? `mailto:${email}` : "#";
   }
-  setInterval(tick, 80);
 
-  // Fill basics
-  $("#name").textContent = cfg.name;
-  $("#summary").textContent = cfg.summary;
-  $("#location").textContent = cfg.location;
-  $("#email").href = `mailto:${cfg.email}`;
-  $("#email").textContent = cfg.email;
-  $("#phone").textContent = cfg.phone;
-  $("#github").href = cfg.github;
-  $("#linkedin").href = cfg.linkedin;
-  $("#resume").href = cfg.resumeUrl;
-
-  // Highlights
-  const hiC = $("#highlights");
-  cfg.highlights.forEach(h=>{
-    const div = document.createElement("div");
-    div.className="kv card reveal";
-    div.innerHTML = `<div class="k">${h.k}</div><div class="v">${h.v}</div>`;
-    hiC.appendChild(div);
-  });
-
-  // Skills
-  const skC = $("#skills");
-  Object.entries(cfg.skills).forEach(([k,arr])=>{
-    const s = document.createElement("div");
-    s.className="card reveal";
-    s.innerHTML = `<div class="small">${k.replace(/_/g," / ")}</div>
-      <div class="skill-badges">${arr.map(x=>`<span class="badge">${x}</span>`).join("")}</div>`;
-    skC.appendChild(s);
-  });
-
-  // Experience
-  const exC = $("#experience");
-  cfg.experience.forEach(e=>{
-    const el = document.createElement("div");
-    el.className="ti card reveal";
-    el.innerHTML = `<div><strong>${e.role}</strong> — ${e.org}</div>
-      <div class="small">${e.period}</div>
-      <ul>${(e.bullets||[]).map(b=>`<li>${b}</li>`).join("")}</ul>`;
-    exC.appendChild(el);
-  });
-
-  // Education
-  const edC = $("#education");
-  cfg.education.forEach(e=>{
-    const el = document.createElement("div");
-    el.className="card reveal";
-    el.innerHTML = `<div><strong>${e.title}</strong></div><div class="small">${e.org} • ${e.period}</div>`;
-    edC.appendChild(el);
-  });
-
-  // Certifications
-  const certC = $("#certs");
-  cfg.certifications.forEach(c=>{
-    const link = c.link ? `<a class="badge" href="${c.link}" target="_blank" rel="noopener">Verify</a>` : "";
-    const el = document.createElement("div");
-    el.className="card reveal";
-    el.innerHTML = `<div><strong>${c.title}</strong></div><div class="small">${c.period||""}</div>${link}`;
-    certC.appendChild(el);
-  });
-
-  // Projects
-  const prC = $("#projects");
-  cfg.projects.forEach(p=>{
-    const el = document.createElement("a");
-    el.href = p.repo;
-    el.target = "_blank";
-    el.rel = "noopener";
-    el.className = "project card reveal";
-    el.innerHTML = `<h3>${p.name}</h3>
-      <div class="meta">${(p.tags||[]).join(" • ")}</div>
-      <p>${p.desc||""}</p>`;
-    prC.appendChild(el);
-  });
-
-  // Scroll reveal
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){ en.target.classList.add("show"); io.unobserve(en.target); }
+  const rolesWrap = $("#roles");
+  if(rolesWrap){
+    rolesWrap.innerHTML = "";
+    roleWords.forEach(word=>{
+      const span = document.createElement("span");
+      span.className = "chip";
+      span.textContent = word;
+      rolesWrap.appendChild(span);
     });
-  }, {threshold:.1});
-  $$(".reveal").forEach(x=>io.observe(x));
+  }
 
-  // Copy email
-  $("#copyEmail").addEventListener("click", async ()=>{
-    await navigator.clipboard.writeText(cfg.email);
-    const btn = $("#copyEmail");
-    const old = btn.textContent;
-    btn.textContent = "Copied!";
-    setTimeout(()=>btn.textContent=old,1000);
-  });
+  setLink("resume", cfg.resumeUrl, {download:true});
+  setLink("heroResume", cfg.resumeUrl, {download:true});
+  setLink("github", cfg.github, {blank:true});
+  setLink("heroGithub", cfg.github, {blank:true});
+  setLink("linkedin", cfg.linkedin, {blank:true});
+  setLink("heroLinkedin", cfg.linkedin, {blank:true});
+
+  const fillHighlights = ()=>{
+    const hiC = $("#highlights");
+    if(!hiC) return;
+    hiC.innerHTML = "";
+    (cfg.highlights || []).forEach(h=>{
+      const card = document.createElement("div");
+      card.className = "highlight-card";
+      card.innerHTML = `<span class="highlight-k">${h.k || ""}</span><span class="highlight-v">${h.v || ""}</span>`;
+      hiC.appendChild(card);
+    });
+  };
+
+  const fillProjects = ()=>{
+    const prC = $("#projects");
+    if(!prC) return;
+    prC.innerHTML = "";
+    (cfg.projects || []).forEach(p=>{
+      const card = document.createElement("a");
+      card.className = "content-card project-card";
+      if(p.repo){
+        card.href = p.repo;
+        card.target = "_blank";
+        card.rel = "noopener";
+      }else{
+        card.classList.add("disabled");
+      }
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${p.name || ""}</h3>
+          <span class="card-meta">${(p.tags || []).join(" • ")}</span>
+        </div>
+        <p>${p.desc || ""}</p>
+      `;
+      prC.appendChild(card);
+    });
+  };
+
+  const fillExperience = ()=>{
+    const exC = $("#experience");
+    if(!exC) return;
+    exC.innerHTML = "";
+    (cfg.experience || []).forEach(e=>{
+      const card = document.createElement("article");
+      card.className = "content-card experience-card";
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${e.role || ""}</h3>
+          <span class="card-meta">${[e.org, e.period].filter(Boolean).join(" • ")}</span>
+        </div>
+        <ul>
+          ${(e.bullets || []).map(b=>`<li>${b}</li>`).join("")}
+        </ul>
+      `;
+      exC.appendChild(card);
+    });
+  };
+
+  const fillSkills = ()=>{
+    const skC = $("#skills");
+    if(!skC) return;
+    skC.innerHTML = "";
+    Object.entries(cfg.skills || {}).forEach(([group, skills])=>{
+      const card = document.createElement("div");
+      card.className = "content-card skill-card";
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${group.replace(/_/g," / ")}</h3>
+        </div>
+        <div class="badge-rail">
+          ${(skills || []).map(s=>`<span class="badge">${s}</span>`).join("")}
+        </div>
+      `;
+      skC.appendChild(card);
+    });
+  };
+
+  const fillCertifications = ()=>{
+    const certC = $("#certs");
+    if(!certC) return;
+    certC.innerHTML = "";
+    (cfg.certifications || []).forEach(c=>{
+      const card = document.createElement("div");
+      card.className = "content-card cert-card";
+      card.innerHTML = `
+        <div class="card-header">
+          <h3>${c.title || ""}</h3>
+          <span class="card-meta">${c.period || ""}</span>
+        </div>
+        ${c.link ? `<a class="badge accent" href="${c.link}" target="_blank" rel="noopener">Verify</a>` : ""}
+      `;
+      certC.appendChild(card);
+    });
+  };
+
+  const fillEducation = ()=>{
+    const edC = $("#education");
+    if(!edC) return;
+    edC.innerHTML = "";
+    (cfg.education || []).forEach(ed=>{
+      const card = document.createElement("div");
+      card.className = "content-card education-card";
+      card.innerHTML = `
+        <h3>${ed.title || ""}</h3>
+        <span class="card-meta">${ed.org || ""}</span>
+        <span class="card-meta subtle">${ed.period || ""}</span>
+      `;
+      edC.appendChild(card);
+    });
+  };
+
+  fillHighlights();
+  fillProjects();
+  fillExperience();
+  fillSkills();
+  fillCertifications();
+  fillEducation();
+
+  const copyBtn = $("#copyEmail");
+  if(copyBtn){
+    copyBtn.addEventListener("click", async ()=>{
+      if(!cfg.email) return;
+      try{
+        await navigator.clipboard.writeText(cfg.email);
+        const original = copyBtn.textContent;
+        copyBtn.textContent = "Copied!";
+        setTimeout(()=>copyBtn.textContent = original, 1000);
+      }catch(err){
+        console.error("Failed to copy email", err);
+      }
+    });
+  }
+
+  setText("#year", new Date().getFullYear().toString());
+  setText("#name2", cfg.name);
 })();

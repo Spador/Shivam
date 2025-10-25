@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0f0f">
   <title>Shivam Parashar — Portfolio</title>
-  <meta name="description" content="Shivam Parashar — Software Engineer / DevOps / Cloud & Data. M.S. CS @ RIT.">
+  <meta name="description" content="Shivam Parashar — Software Engineer focused on DevOps, cloud platforms, and data engineering.">
   <meta property="og:title" content="Shivam Parashar — Portfolio">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Software Engineer / DevOps / Cloud & Data.">
-  <meta property="og:image" content="assets/images/headshot.svg">
+  <meta property="og:description" content="Software Engineer • DevOps • Cloud & Data">
+  <meta property="og:image" content="assets/images/Headshot.jpeg">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,77 +17,118 @@
   <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner container">
-      <a class="logo" href="#top">
-        <span class="logo-badge">SP</span>
-        <span class="logo-name">Shivam Parashar</span>
+  <header class="topbar" id="top">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">SP</span>
+        <span class="brand-name">Shivam Parashar</span>
       </a>
-      <div class="pill-row">
-        <a id="resume" class="btn outline" href="#" download>Download Résumé</a>
-        <a id="github" class="btn outline" href="#" target="_blank" rel="noopener">GitHub</a>
-        <a id="linkedin" class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero container" id="top">
-    <div class="hero-inner">
-      <div>
-        <span class="tag">Open to Software Engineer, DevOps, Platform, Data Engineer, ML/AI Engineer</span>
-        <h1><span id="name">Your Name</span><br><span id="typed"></span></h1>
-        <p class="lede" id="summary"></p>
-        <div class="pill-row">
-          <span class="tag" id="location"></span>
-          <a class="tag" id="email" href="#"></a>
-          <span class="tag" id="phone"></span>
-          <button id="copyEmail" class="btn outline">Copy Email</button>
-        </div>
-      </div>
-      <div class="card reveal" style="display:grid;place-items:center">
-        <img src="assets/images/Headshot.jpeg" alt="Headshot" width="280" height="280" style="border-radius:20px">
+      <nav class="nav-links">
+        <a href="#projects-section">Projects</a>
+        <a href="#experience-section">Experience</a>
+        <a href="#skills-section">Skills</a>
+        <a href="#education-section">Education</a>
+      </nav>
+      <div class="nav-actions">
+        <a id="resume" class="btn solid" href="#" download>Résumé</a>
+        <a id="linkedin" class="btn ghost" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a id="github" class="btn ghost" href="#" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h2>Highlights</h2>
-      <div id="highlights" class="list"></div>
+  <main>
+    <section class="hero">
+      <div class="hero-backdrop"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-eyebrow" id="heroTagline">Open to opportunities</p>
+          <h1 class="hero-title" id="heroName">Shivam Parashar</h1>
+          <p class="hero-summary" id="summary"></p>
+          <div class="role-chips" id="roles"></div>
+          <div class="hero-actions">
+            <a id="heroResume" class="btn solid" href="#" download>View Résumé</a>
+            <a id="heroLinkedin" class="btn light" href="#" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            <a id="heroGithub" class="btn light" href="#" target="_blank" rel="noopener">View GitHub</a>
+          </div>
+          <div class="hero-meta">
+            <span class="meta-pill" id="location"></span>
+            <a class="meta-pill" id="email" href="#"></a>
+            <span class="meta-pill" id="phone"></span>
+            <button id="copyEmail" class="btn minimal">Copy Email</button>
+          </div>
+        </div>
+        <div class="hero-poster">
+          <div class="poster-frame">
+            <img src="assets/images/Headshot.jpeg" alt="Portrait of Shivam Parashar" width="420" height="420" loading="lazy">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Projects</h2>
-      <div id="projects" class="projects"></div>
+    <section class="section" id="highlights-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Highlights</h2>
+        </div>
+        <div id="highlights" class="pill-rail"></div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Experience</h2>
-      <div id="experience" class="timeline"></div>
+    <section class="section" id="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Projects</h2>
+        </div>
+        <div id="projects" class="content-rail"></div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Skills</h2>
-      <div id="skills" class="grid"></div>
+    <section class="section" id="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Experience</h2>
+        </div>
+        <div id="experience" class="content-rail"></div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Certifications</h2>
-      <div id="certs" class="grid"></div>
+    <section class="section" id="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills</h2>
+        </div>
+        <div id="skills" class="content-rail"></div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Education</h2>
-      <div id="education" class="grid"></div>
+    <section class="section" id="certs-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Certifications</h2>
+        </div>
+        <div id="certs" class="content-rail"></div>
+      </div>
     </section>
+
+    <section class="section" id="education-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Education</h2>
+        </div>
+        <div id="education" class="content-rail"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div>© <span id="year"></span> <span id="name2">Shivam Parashar</span></div>
+        <div>Crafted with HTML • CSS • JavaScript</div>
+      </div>
+    </footer>
   </main>
-
-  <footer class="footer">
-    <div class="container">© <span id="year"></span> <span id="name2">Shivam Parashar</span> • Built with HTML/CSS/JS</div>
-  </footer>
 
   <script src="config.js"></script>
   <script src="script.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear(); document.getElementById('name2').textContent = (window.PORTFOLIO||{}).name||"";</script>
 </body>
 </html>
