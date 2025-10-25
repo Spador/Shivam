@@ -11,10 +11,22 @@ window.PORTFOLIO = {
   resumeUrl: "assets/Shivam_Resume.pdf",
   summary: "M.S. in Computer Science from RIT (GPA 3.8), engineering scalable backend and cloud automation systems, backed by three years at Deloitte delivering software and DevOps solutions on AWS.",
   highlights: [
-    {k:"Multi-Agent GenAI", v:"CrewAI automations for debates, fintech, code, and stock scouts"},
-    {k:"Cloud Impact", v:"3 yrs at Deloitte scaling AWS/OCI data & CI/CD platforms"},
-    {k:"Traffic AI", v:"RL rerouting cut commute waits 25% & CO2 18% in SUMO sims"},
-    {k:"Teaching", v:"TA for RIT Data Structures & Algorithms (CSCI 141/242)"}
+    {
+      title: "Agentic AI Systems",
+      description: "Built multi-agent frameworks with CrewAI, Sidekick (LangGraph AutoGen), and OpenAI SDK, orchestrating MCP-integrated automations for research, fintech, and code generation."
+    },
+    {
+      title: "Cloud Engineering Impact",
+      description: "Delivered 3 years at Deloitte leading AWS data platform migrations and CI/CD modernization, scaling infrastructure and delivery pipelines across enterprise clients."
+    },
+    {
+      title: "Full-Stack Curriculum Platform",
+      description: "Developed a Spring Boot + React + Neo4j application enabling secure, role-based curriculum management and 40% faster graph query performance."
+    },
+    {
+      title: "Teaching & Mentorship",
+      description: "Served as Teaching Assistant for Java (OOP) and Python courses in RIT’s DS & Algorithms and Problem Solving (CSCI 141/242)."
+    }
   ],
   skills: {
     Languages_Databases: ["Python","Java","SQL","C/C++","Shell/Bash","PostgreSQL","MongoDB","Neo4j","DynamoDB"],

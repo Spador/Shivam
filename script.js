@@ -82,9 +82,12 @@
     if(!hiC) return;
     hiC.innerHTML = "";
     (cfg.highlights || []).forEach(h=>{
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "highlight-card";
-      card.innerHTML = `<span class="highlight-k">${h.k || ""}</span><span class="highlight-v">${h.v || ""}</span>`;
+      card.innerHTML = `
+        <h3>${h.title || ""}</h3>
+        <p>${h.description || ""}</p>
+      `;
       hiC.appendChild(card);
     });
   };
