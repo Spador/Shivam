@@ -348,16 +348,19 @@ img{max-width:100%;display:block}
   letter-spacing:.16em;
   color:var(--text-muted);
 }
-.card-meta.subtle{
-  color:rgba(255,255,255,.45);
-}
+.card-meta.subtle{color:rgba(255,255,255,.45);}
 
-.experience-card ul{
-  margin:12px 0 0;
-  padding-left:20px;
+.experience-summary{
+  margin-top:14px;
   color:var(--text-muted);
-  font-size:14px;
-  line-height:1.6;
+  font-size:15px;
+  line-height:1.7;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.experience-summary p{
+  margin:0;
 }
 
 .badge-rail{
@@ -379,6 +382,16 @@ img{max-width:100%;display:block}
   background:var(--accent);
   border-color:var(--accent);
   font-weight:600;
+}
+
+.skill-grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+}
+.skill-grid .content-card{
+  min-width:0;
+  scroll-snap-align:unset;
 }
 
 .footer{

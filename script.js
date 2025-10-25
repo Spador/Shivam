@@ -106,14 +106,18 @@
     (cfg.experience || []).forEach(e=>{
       const card = document.createElement("article");
       card.className = "content-card experience-card";
+      const meta = [e.org, e.period].filter(Boolean).join(" • ");
+      const summary = Array.isArray(e.summary)
+        ? e.summary.filter(Boolean).map(line=>`<p>${line}</p>`).join("")
+        : (e.summary ? `<p>${e.summary}</p>` : "");
       card.innerHTML = `
         <div class="card-header">
           <h3>${e.role || ""}</h3>
-          <span class="card-meta">${[e.org, e.period].filter(Boolean).join(" • ")}</span>
+          <span class="card-meta">${meta}</span>
         </div>
-        <ul>
-          ${(e.bullets || []).map(b=>`<li>${b}</li>`).join("")}
-        </ul>
+        <div class="experience-summary">
+          ${summary}
+        </div>
       `;
       exC.appendChild(card);
     });
@@ -126,12 +130,14 @@
     Object.entries(cfg.skills || {}).forEach(([group, skills])=>{
       const card = document.createElement("div");
       card.className = "content-card skill-card";
+      const title = group.replace(/_/g," / ");
+      const items = (skills || []).map(s=>`<span class="badge">${s}</span>`).join("");
       card.innerHTML = `
         <div class="card-header">
-          <h3>${group.replace(/_/g," / ")}</h3>
+          <h3>${title}</h3>
         </div>
         <div class="badge-rail">
-          ${(skills || []).map(s=>`<span class="badge">${s}</span>`).join("")}
+          ${items}
         </div>
       `;
       skC.appendChild(card);
