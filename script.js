@@ -27,11 +27,26 @@
   };
 
   const roleWords = Array.isArray(cfg.roleWords) ? cfg.roleWords : [];
-  const eyebrow = roleWords.length
-    ? roleWords.join(" | ")
-    : "Software Engineer";
+  const renderTagline = ()=>{
+    const el = $("#heroTagline");
+    if(!el) return;
+    if(roleWords.length){
+      const markup = roleWords.map((word, idx)=>{
+        const tag = `<span class="hero-tag">${word}</span>`;
+        if(idx === 2){
+          return `${tag}<span class="hero-break"></span>`;
+        }
+        return tag;
+      }).join("");
+      el.innerHTML = markup;
+      el.setAttribute("aria-label", roleWords.join(", "));
+    }else{
+      el.innerHTML = `<span class="hero-tag">Software Engineer</span>`;
+      el.removeAttribute("aria-label");
+    }
+  };
+  renderTagline();
 
-  setText("#heroTagline", eyebrow);
   setText("#heroName", cfg.name);
   setText("#summary", cfg.summary);
   setText("#location", cfg.location);

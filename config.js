@@ -2,14 +2,14 @@
 // Quick-edit config for your site
 window.PORTFOLIO = {
   name: "Shivam Parashar",
-  roleWords: ["Software Engineer", "DevOps & Cloud", "Data & ML", "AI & Multi-Agent Systems"],
+  roleWords: ["Software Engineer", "Backend & Cloud", "DevOps", "Data & ML", "Agentic AI Systems"],
   location: "Rochester, NY (Open to Relocate)",
   email: "sp3466@rit.edu",
   phone: "+1 (585) 481-9419",
   github: "https://github.com/Spador",
   linkedin: "https://linkedin.com/in/shivam-parashar1",
   resumeUrl: "assets/Shivam_Resume.pdf",
-  summary: "MS CS candidate at RIT (GPA 3.8) building multi-agent automation and RL traffic systems, following 3 years at Deloitte delivering cloud-scale data platforms on AWS and OCI.",
+  summary: "M.S. in Computer Science from RIT (GPA 3.8), engineering scalable backend and cloud automation systems, backed by three years at Deloitte delivering software and DevOps solutions on AWS.",
   highlights: [
     {k:"Multi-Agent GenAI", v:"CrewAI automations for debates, fintech, code, and stock scouts"},
     {k:"Cloud Impact", v:"3 yrs at Deloitte scaling AWS/OCI data & CI/CD platforms"},
