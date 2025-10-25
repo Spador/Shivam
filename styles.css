@@ -176,7 +176,8 @@ img{max-width:100%;display:block}
   margin:0;
   text-transform:uppercase;
   letter-spacing:.26em;
-  font-size:12px;
+  font-size:13px;
+  font-weight:700;
   color:var(--accent);
 }
 .hero-title{
