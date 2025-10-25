@@ -41,23 +41,30 @@ window.PORTFOLIO = {
       role: "Software Engineer",
       org: "Deloitte Consulting USI",
       period: "Jul 2019 – Dec 2021",
-      summary: [
-        "Led data platform delivery for healthcare, finance, and retail clients, shipping 10+ AWS and OCI databases with automated observability and governance.",
-        "Partnered with analysts to launch 15+ Tableau & Power BI dashboards over resilient SQL/ETL pipelines, unlocking faster stakeholder insights.",
-        "Embedded Java microservices into Jenkins CI/CD and scripted Terraform-on-Kubernetes sandboxes, cutting release times by 30% and provisioning by 40%."
+      bullets: [
+        "Engineered and deployed cloud-native data and backend systems for healthcare, finance, and retail clients, delivering 10+ AWS database platforms with automated observability and governance.",
+        "Developed Java-based microservices integrated into Jenkins CI/CD workflows, accelerating deployments by 30% and improving release reliability.",
+        "Automated infrastructure provisioning with Terraform and Kubernetes, reducing environment setup time by 40%.",
+        "Designed scalable ETL pipelines and Tableau/Power BI dashboards for real-time analytics and decision-making."
       ]
     },
     {
-      role: "Data Scientist Intern",
+      role: "Data Scientist Co-op",
       org: "I3CLogic Technologies Pvt. Ltd.",
       period: "May 2018 – Jun 2018",
-      summary: "Optimized Call Data Record ingestion with Pandas for a 48% faster pipeline and trained an AWS SageMaker model (92.7% accuracy) to impute missing telecom records."
+      bullets: [
+        "Optimized telecom data ingestion with Python (Pandas) for 48% faster throughput.",
+        "Built and trained an AWS SageMaker ML model (92.7% accuracy) to impute missing call records, improving data quality."
+      ]
     },
     {
-      role: "Software Engineer (Backend) Intern",
+      role: "Software Engineer (Backend) Co-op",
       org: "Oracle",
       period: "May 2017 – Jul 2017",
-      summary: "Built Java REST services on Oracle WebLogic, hardened release automation, and tuned SQL/PLSQL analytics to cut reporting latency by 19% for enterprise dashboards."
+      bullets: [
+        "Built RESTful backend services using Java (WebLogic) to support enterprise analytics.",
+        "Tuned SQL/PLSQL queries and automated release workflows, reducing report latency by 19%."
+      ]
     }
   ],
   education: [

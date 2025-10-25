@@ -124,18 +124,20 @@
     (cfg.experience || []).forEach(e=>{
       const card = document.createElement("article");
       card.className = "content-card experience-card";
-      const meta = [e.org, e.period].filter(Boolean).join(" • ");
-      const summary = Array.isArray(e.summary)
-        ? e.summary.filter(Boolean).map(line=>`<p>${line}</p>`).join("")
-        : (e.summary ? `<p>${e.summary}</p>` : "");
+      const period = e.period ? `<span class="period-pill">${e.period}</span>` : "";
+      const orgLine = e.org ? `<div class="org-line">${e.org}</div>` : "";
+      const bullets = Array.isArray(e.bullets)
+        ? e.bullets.filter(Boolean).map(b=>`<li>${b}</li>`).join("")
+        : "";
       card.innerHTML = `
-        <div class="card-header">
-          <h3>${e.role || ""}</h3>
-          <span class="card-meta">${meta}</span>
+        <div class="card-header experience-header">
+          <div class="heading">
+            <h3>${e.role || ""}</h3>
+            ${orgLine}
+          </div>
+          ${period}
         </div>
-        <div class="experience-summary">
-          ${summary}
-        </div>
+        ${bullets ? `<ul class="experience-points">${bullets}</ul>` : ""}
       `;
       exC.appendChild(card);
     });

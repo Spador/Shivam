@@ -341,6 +341,16 @@ img{max-width:100%;display:block}
   border-radius:999px;
 }
 
+.experience-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+.experience-list .content-card{
+  min-width:0;
+  width:100%;
+}
+
 .content-card{
   position:relative;
   min-width:260px;
@@ -386,17 +396,82 @@ img{max-width:100%;display:block}
 }
 .card-meta.subtle{color:rgba(255,255,255,.45);}
 
-.experience-summary{
-  margin-top:14px;
+.experience-card{
+  position:relative;
+  overflow:hidden;
+}
+.experience-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 0% 0%, rgba(126,58,242,.25), transparent 55%);
+  opacity:.6;
+  pointer-events:none;
+}
+.experience-card .experience-header{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+}
+.experience-card .heading{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.experience-card h3{
+  margin:0;
+  letter-spacing:.06em;
+  font-size:22px;
+}
+.experience-card .org-line{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.18em;
   color:var(--text-muted);
-  font-size:15px;
-  line-height:1.7;
+}
+.experience-card .period-pill{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(139,92,246,.18);
+  border:1px solid rgba(139,92,246,.35);
+  font-size:13px;
+  color:var(--text);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.experience-card .experience-points{
+  position:relative;
+  z-index:1;
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
   display:flex;
   flex-direction:column;
   gap:12px;
 }
-.experience-summary p{
-  margin:0;
+.experience-card .experience-points li{
+  position:relative;
+  padding-left:26px;
+  color:var(--text-muted);
+  line-height:1.7;
+  font-size:16px;
+}
+.experience-card .experience-points li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--accent), var(--brand-2, #06b6d4));
+  box-shadow:0 0 10px rgba(139,92,246,.6);
 }
 
 .badge-rail{
