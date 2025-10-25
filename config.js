@@ -2,7 +2,7 @@
 // Quick-edit config for your site
 window.PORTFOLIO = {
   name: "Shivam Parashar",
-  roleWords: ["Software Engineer", "Platform & DevOps", "Data & ML Engineer", "Multi-Agent Systems", "Cloud Architect"],
+  roleWords: ["Software Engineer", "DevOps & Cloud", "Data & ML", "AI & Multi-Agent Systems"],
   location: "Rochester, NY (Open to Relocate)",
   email: "sp3466@rit.edu",
   phone: "+1 (585) 481-9419",

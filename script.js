@@ -28,8 +28,8 @@
 
   const roleWords = Array.isArray(cfg.roleWords) ? cfg.roleWords : [];
   const eyebrow = roleWords.length
-    ? `Open to ${roleWords.join(" • ")}`
-    : "Open to new possibilities";
+    ? roleWords.join(" | ")
+    : "Software Engineer";
 
   setText("#heroTagline", eyebrow);
   setText("#heroName", cfg.name);
