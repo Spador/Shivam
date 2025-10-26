@@ -29,12 +29,16 @@ window.PORTFOLIO = {
     }
   ],
   skills: {
-    Languages_Databases: ["Python","Java","SQL","C/C++","Shell/Bash","PostgreSQL","MongoDB","Neo4j","DynamoDB"],
-    Data_ML_GenAI: ["Pandas","NumPy","Matplotlib","Folium","Scikit-Learn","AWS SageMaker","AWS Bedrock","LangGraph","CrewAI"],
-    Cloud_Infrastructure: ["AWS (IAM/S3/EC2/Lambda)","OCI","Docker","Kubernetes","Terraform","Route 53","CloudFront"],
-    CICD_DevOps: ["Jenkins","GitLab CI","GitHub Actions","Git","Jira","MCP"],
-    API_BI: ["RESTful APIs","JSON","Tableau","Power BI","Excel"],
-    Environments_IDEs: ["Linux/Unix","Windows","macOS","VS Code","IntelliJ","PyCharm"]
+    Programming_Languages: ["Python","Java","SQL","C/C++","Shell/Bash"],
+    Databases_Storage: ["PostgreSQL","MongoDB","Neo4j","DynamoDB","Amazon S3","Amazon Redshift"],
+    Data_Engineering_Libraries: ["Pandas","NumPy","Matplotlib","Folium","Scikit-Learn"],
+    Analytics_Visualization: ["Tableau","Power BI","Excel"],
+    ML_GenAI_Frameworks: ["AWS SageMaker","AWS Bedrock","LangGraph","CrewAI","AutoGen","OpenAI SDK"],
+    Cloud_Platforms: ["AWS (IAM)","AWS EC2","AWS Lambda","AWS EKS","AWS Fargate","AWS API Gateway","AWS CloudFront","AWS VPC","OCI"],
+    Infrastructure_IaC: ["Docker","Kubernetes","Terraform","AWS Route 53"],
+    CICD_Automation: ["Jenkins","GitLab CI","GitHub Actions","MCP"],
+    APIs_Integration: ["RESTful APIs","JSON","Microservices"],
+    Developer_Workspaces: ["Linux/Unix","Windows","macOS","VS Code","IntelliJ","PyCharm","Git","Jira"]
   },
   experience: [
     {

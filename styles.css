@@ -621,6 +621,7 @@ img{max-width:100%;display:block}
 .skill-grid .content-card{
   min-width:0;
   scroll-snap-align:unset;
+  min-height:220px;
 }
 
 .footer{
