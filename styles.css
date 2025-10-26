@@ -612,6 +612,9 @@ img{max-width:100%;display:block}
   border-color:var(--accent);
   font-weight:600;
 }
+.cert-card .badge{
+  margin-top:12px;
+}
 
 .skill-grid{
   display:grid;

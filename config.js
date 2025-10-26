@@ -72,8 +72,8 @@ window.PORTFOLIO = {
     }
   ],
   education: [
-    {title:"M.S., Computer Science (GPA 3.8)", org:"Rochester Institute of Technology", period:"Jan 2023 – May 2025"},
-    {title:"B.S., Computer Science", org:"Vellore Institute of Technology", period:"Jul 2015 – Jun 2019"}
+    {title:"M.S., Computer Science (GPA 3.8/4.0)", org:"Rochester Institute of Technology", period:"Jan 2023 – May 2025"},
+    {title:"B.S., Computer Science (GPA 8.8/10)", org:"Vellore Institute of Technology", period:"Jul 2015 – Jun 2019"}
   ],
   certifications: [
     {title:"AWS Certified Solutions Architect – Associate (SAA‑C03)", period:"Aug 2025 – Aug 2028", link:"https://www.credly.com/badges/b2c32831-a4dc-45ab-b9ed-5dca0969ccb8/public_url"},
