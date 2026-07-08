@@ -1,110 +1,77 @@
+(function () {
+  "use strict";
 
-(function(){
-  const $ = (sel, el=document)=>el.querySelector(sel);
-  const $$ = (sel, el=document)=>Array.from(el.querySelectorAll(sel));
-  const cfg = window.PORTFOLIO;
+  // Gates the reveal styles so content stays visible without JS
+  document.documentElement.classList.add("js");
 
-  // Typed effect
-  const typed = $("#typed");
-  const words = cfg.roleWords || [];
-  let wi=0, ci=0, dir=1;
-  function tick(){
-    const w = words[wi]||"";
-    ci += dir;
-    if(ci> w.length+5){ dir=-1; }
-    if(ci<0){ dir=1; wi=(wi+1)%words.length; ci=0; }
-    typed.textContent = w.slice(0, Math.max(0, Math.min(w.length, ci)));
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---------- Scroll reveal ----------
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealEls.forEach(function (el) { el.classList.add("show"); });
+  } else {
+    // Stagger siblings that enter in the same frame
+    var pending = [];
+    var flushScheduled = false;
+    function flush() {
+      pending.forEach(function (el, i) {
+        el.style.setProperty("--reveal-delay", (i * 70) + "ms");
+        el.classList.add("show");
+      });
+      pending = [];
+      flushScheduled = false;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          pending.push(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+      if (pending.length && !flushScheduled) {
+        flushScheduled = true;
+        requestAnimationFrame(flush);
+      }
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    revealEls.forEach(function (el) { io.observe(el); });
   }
-  setInterval(tick, 80);
 
-  // Fill basics
-  $("#name").textContent = cfg.name;
-  $("#summary").textContent = cfg.summary;
-  $("#location").textContent = cfg.location;
-  $("#email").href = `mailto:${cfg.email}`;
-  $("#email").textContent = cfg.email;
-  $("#phone").textContent = cfg.phone;
-  $("#github").href = cfg.github;
-  $("#linkedin").href = cfg.linkedin;
-  $("#resume").href = cfg.resumeUrl;
+  // ---------- Header border on scroll ----------
+  var header = document.querySelector(".site-header");
+  function onScroll() {
+    header.classList.toggle("scrolled", window.scrollY > 8);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
-  // Highlights
-  const hiC = $("#highlights");
-  cfg.highlights.forEach(h=>{
-    const div = document.createElement("div");
-    div.className="kv card reveal";
-    div.innerHTML = `<div class="k">${h.k}</div><div class="v">${h.v}</div>`;
-    hiC.appendChild(div);
+  // ---------- Mobile nav ----------
+  var toggle = document.querySelector(".nav-toggle");
+  var menu = document.getElementById("nav-menu");
+  toggle.addEventListener("click", function () {
+    var open = menu.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+  menu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
   });
 
-  // Skills
-  const skC = $("#skills");
-  Object.entries(cfg.skills).forEach(([k,arr])=>{
-    const s = document.createElement("div");
-    s.className="card reveal";
-    s.innerHTML = `<div class="small">${k.replace(/_/g," / ")}</div>
-      <div class="skill-badges">${arr.map(x=>`<span class="badge">${x}</span>`).join("")}</div>`;
-    skC.appendChild(s);
-  });
-
-  // Experience
-  const exC = $("#experience");
-  cfg.experience.forEach(e=>{
-    const el = document.createElement("div");
-    el.className="ti card reveal";
-    el.innerHTML = `<div><strong>${e.role}</strong> — ${e.org}</div>
-      <div class="small">${e.period}</div>
-      <ul>${(e.bullets||[]).map(b=>`<li>${b}</li>`).join("")}</ul>`;
-    exC.appendChild(el);
-  });
-
-  // Education
-  const edC = $("#education");
-  cfg.education.forEach(e=>{
-    const el = document.createElement("div");
-    el.className="card reveal";
-    el.innerHTML = `<div><strong>${e.title}</strong></div><div class="small">${e.org} • ${e.period}</div>`;
-    edC.appendChild(el);
-  });
-
-  // Certifications
-  const certC = $("#certs");
-  cfg.certifications.forEach(c=>{
-    const link = c.link ? `<a class="badge" href="${c.link}" target="_blank" rel="noopener">Verify</a>` : "";
-    const el = document.createElement("div");
-    el.className="card reveal";
-    el.innerHTML = `<div><strong>${c.title}</strong></div><div class="small">${c.period||""}</div>${link}`;
-    certC.appendChild(el);
-  });
-
-  // Projects
-  const prC = $("#projects");
-  cfg.projects.forEach(p=>{
-    const el = document.createElement("a");
-    el.href = p.repo;
-    el.target = "_blank";
-    el.rel = "noopener";
-    el.className = "project card reveal";
-    el.innerHTML = `<h3>${p.name}</h3>
-      <div class="meta">${(p.tags||[]).join(" • ")}</div>
-      <p>${p.desc||""}</p>`;
-    prC.appendChild(el);
-  });
-
-  // Scroll reveal
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){ en.target.classList.add("show"); io.unobserve(en.target); }
+  // ---------- Copy email ----------
+  var copyBtn = document.getElementById("copy-email");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      navigator.clipboard.writeText("sp3466@rit.edu").then(function () {
+        var old = copyBtn.textContent;
+        copyBtn.textContent = "Copied ✓";
+        setTimeout(function () { copyBtn.textContent = old; }, 1400);
+      });
     });
-  }, {threshold:.1});
-  $$(".reveal").forEach(x=>io.observe(x));
+  }
 
-  // Copy email
-  $("#copyEmail").addEventListener("click", async ()=>{
-    await navigator.clipboard.writeText(cfg.email);
-    const btn = $("#copyEmail");
-    const old = btn.textContent;
-    btn.textContent = "Copied!";
-    setTimeout(()=>btn.textContent=old,1000);
-  });
+  // ---------- Footer year ----------
+  document.getElementById("year").textContent = new Date().getFullYear();
 })();

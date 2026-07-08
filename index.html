@@ -3,90 +3,315 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shivam Parashar — Portfolio</title>
-  <meta name="description" content="Shivam Parashar — Software Engineer / DevOps / Cloud & Data. M.S. CS @ RIT.">
-  <meta property="og:title" content="Shivam Parashar — Portfolio">
+  <title>Shivam Parashar — Backend · AI · DevOps Engineer</title>
+  <meta name="description" content="Shivam Parashar — Backend, AI and Infrastructure engineer. MS CS @ RIT, ex-Deloitte, AWS certified. Open to Backend, AI Engineer, DevOps and Platform roles.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="canonical" href="https://spador.github.io/Shivam/">
+  <meta property="og:title" content="Shivam Parashar — Backend · AI · DevOps Engineer">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Software Engineer / DevOps / Cloud & Data.">
-  <meta property="og:image" content="assets/images/headshot.svg">
+  <meta property="og:url" content="https://spador.github.io/Shivam/">
+  <meta property="og:description" content="Backend, AI and Infrastructure engineer. MS CS @ RIT, ex-Deloitte, AWS certified. Open to work.">
+  <meta property="og:image" content="https://spador.github.io/Shivam/assets/images/Headshot.jpeg">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivam Parashar",
+    "jobTitle": "Backend Engineer",
+    "email": "mailto:sp3466@rit.edu",
+    "url": "https://spador.github.io/Shivam/",
+    "sameAs": [
+      "https://github.com/Spador",
+      "https://linkedin.com/in/shivam-parashar1"
+    ],
+    "alumniOf": ["Rochester Institute of Technology", "Vellore Institute of Technology"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA" }
+  }
+  </script>
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner container">
-      <a class="logo" href="#top">
-        <span class="logo-badge">SP</span>
-        <span class="logo-name">Shivam Parashar</span>
-      </a>
-      <div class="pill-row">
-        <a id="resume" class="btn outline" href="#" download>Download Résumé</a>
-        <a id="github" class="btn outline" href="#" target="_blank" rel="noopener">GitHub</a>
-        <a id="linkedin" class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="hero container" id="top">
-    <div class="hero-inner">
-      <div>
-        <span class="tag">Open to Software Engineer, DevOps, Platform, Data Engineer, ML/AI Engineer</span>
-        <h1><span id="name">Your Name</span><br><span id="typed"></span></h1>
-        <p class="lede" id="summary"></p>
-        <div class="pill-row">
-          <span class="tag" id="location"></span>
-          <a class="tag" id="email" href="#"></a>
-          <span class="tag" id="phone"></span>
-          <button id="copyEmail" class="btn outline">Copy Email</button>
-        </div>
-      </div>
-      <div class="card reveal" style="display:grid;place-items:center">
-        <img src="assets/images/Headshot.jpeg" alt="Headshot" width="280" height="280" style="border-radius:20px">
-      </div>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Shivam Parashar — back to top">
+        <span class="brand-dot" aria-hidden="true"></span>
+        Shivam&nbsp;Parashar
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn-small" href="mailto:sp3466@rit.edu">Open to work<span class="pulse-dot" aria-hidden="true"></span></a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h2>Highlights</h2>
-      <div id="highlights" class="list"></div>
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero container">
+      <p class="badge reveal" data-reveal>
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Open to work — Backend · AI · DevOps · Platform
+      </p>
+      <h1 class="reveal" data-reveal>
+        Backend &amp; AI engineer<br>
+        <span class="dim">building reliable cloud systems.</span>
+      </h1>
+      <p class="lede reveal" data-reveal>
+        I'm Shivam — MS in Computer Science from RIT, previously at Deloitte and Oracle,
+        currently building serverless matching services at Saayam For All. I care about
+        clean APIs, boring-in-a-good-way infrastructure, and systems that stay cheap and fast under load.
+      </p>
+      <div class="cta-row reveal" data-reveal>
+        <a class="btn" href="mailto:sp3466@rit.edu">Email me</a>
+        <a class="btn btn-ghost" href="assets/Shivam_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/shivam-parashar1" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Spador" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <dl class="hero-meta reveal" data-reveal>
+        <div><dt>Location</dt><dd>Seattle, WA · open to relocate</dd></div>
+        <div><dt>Experience</dt><dd>4+ years across backend, cloud &amp; data</dd></div>
+        <div><dt>Certified</dt><dd>AWS Solutions Architect – Associate</dd></div>
+      </dl>
     </section>
 
-    <section class="section">
-      <h2>Projects</h2>
-      <div id="projects" class="projects"></div>
+    <!-- ================= ABOUT ================= -->
+    <section class="section container" id="about">
+      <p class="eyebrow reveal" data-reveal>01 — About</p>
+      <div class="about-grid">
+        <div class="reveal" data-reveal>
+          <h2>Systems that hold up in production.</h2>
+          <p>
+            I've spent the last several years shipping backend services, data platforms and
+            cloud infrastructure — from Terraform-provisioned AWS environments and Jenkins
+            pipelines at Deloitte, to Flask APIs on Lambda + API Gateway at Saayam For All,
+            with LLM classification wired in as an enrichment step rather than a crutch.
+          </p>
+          <p>
+            Lately I build a lot in the infrastructure and AI-agent space: cost monitoring for AWS,
+            dependency graphs for Terraform &amp; Kubernetes, Redis-backed rate limiters, and
+            multi-agent automations with CrewAI and LangGraph.
+          </p>
+        </div>
+        <figure class="about-photo reveal" data-reveal>
+          <img src="assets/images/Headshot.jpeg" alt="Portrait of Shivam Parashar" width="320" height="320" loading="lazy">
+        </figure>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Experience</h2>
-      <div id="experience" class="timeline"></div>
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section container" id="experience">
+      <p class="eyebrow reveal" data-reveal>02 — Experience</p>
+      <h2 class="reveal" data-reveal>Where I've worked</h2>
+
+      <article class="xp reveal" data-reveal>
+        <div class="xp-side">
+          <h3>Saayam For All</h3>
+          <p class="mono">Jul 2025 — Present · Seattle, WA</p>
+        </div>
+        <div class="xp-body">
+          <p class="xp-role">Backend Engineer</p>
+          <ul>
+            <li>Build stateless REST APIs in Flask with clean request validation, isolated business logic and production-ready error handling.</li>
+            <li>Implemented a deterministic, score-based matching service, integrating LLM classification as an enrichment step.</li>
+            <li>Deploy services on AWS Lambda + API Gateway, optimizing for concurrency, low latency and cost.</li>
+            <li>Manage AWS IAM roles and policies, enforcing least-privilege service-to-service access.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp reveal" data-reveal>
+        <div class="xp-side">
+          <h3>Deloitte Consulting USI</h3>
+          <p class="mono">Jul 2019 — Dec 2022 · Gurugram, India</p>
+        </div>
+        <div class="xp-body">
+          <p class="xp-role">Software Engineer</p>
+          <ul>
+            <li>Delivered 10+ databases on AWS and OCI for healthcare, finance and retail clients, with automated monitoring and alerting.</li>
+            <li>Provisioned infrastructure as code on AWS with Terraform — EC2, S3 and VPC configurations.</li>
+            <li>Streamlined CI/CD for Java applications with Jenkins, Maven and Gradle, cutting deployment times by 30%.</li>
+            <li>Automated sandbox provisioning with Terraform and Docker on Kubernetes, cutting setup time by 40%.</li>
+            <li>Built 15+ Tableau / Power BI dashboards on SQL/ETL pipelines to drive stakeholder decisions.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp reveal" data-reveal>
+        <div class="xp-side">
+          <h3>Oracle</h3>
+          <p class="mono">May 2017 — Jul 2017 · Pune, India</p>
+        </div>
+        <div class="xp-body">
+          <p class="xp-role">Software Engineer (Backend), Co-op</p>
+          <ul>
+            <li>Built Java REST APIs on Oracle WebLogic, improving service integration and reducing production errors.</li>
+            <li>Optimized SQL/PLSQL with indexes and views, cutting report generation time by 19%.</li>
+            <li>Automated database maintenance with shell scripting, reducing manual operational effort by 30%.</li>
+          </ul>
+        </div>
+      </article>
     </section>
 
-    <section class="section">
-      <h2>Skills</h2>
-      <div id="skills" class="grid"></div>
+    <!-- ================= PROJECTS ================= -->
+    <section class="section container" id="projects">
+      <p class="eyebrow reveal" data-reveal>03 — Projects</p>
+      <h2 class="reveal" data-reveal>Selected work</h2>
+      <div class="project-grid">
+        <a class="project reveal" data-reveal href="https://github.com/Spador/cloudpulse" target="_blank" rel="noopener">
+          <h3>CloudPulse <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>Open-source AWS cost and resource monitoring — self-hosted, no SaaS fees.</p>
+          <p class="tags mono">Python · AWS · Monitoring</p>
+        </a>
+        <a class="project reveal" data-reveal href="https://github.com/Spador/InfraGraph" target="_blank" rel="noopener">
+          <h3>InfraGraph <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>Infrastructure dependency visualizer — parses Terraform &amp; Kubernetes files and renders the dependency graph with Neo4j, React and D3.</p>
+          <p class="tags mono">Python · Neo4j · React · D3</p>
+        </a>
+        <a class="project reveal" data-reveal href="https://github.com/Spador/RateShield" target="_blank" rel="noopener">
+          <h3>RateShield <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>Production-grade API rate-limiter middleware — Token Bucket, Sliding Window Log and Fixed Window Counter, backed by Redis.</p>
+          <p class="tags mono">TypeScript · Redis · Node.js</p>
+        </a>
+        <a class="project reveal" data-reveal href="https://github.com/Spador/DeployDeck" target="_blank" rel="noopener">
+          <h3>DeployDeck <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>Self-hosted continuous-deployment dashboard — tracks deployments, manages rollbacks and enforces health gates. Runs locally via Docker Compose.</p>
+          <p class="tags mono">Python · Docker · CI/CD</p>
+        </a>
+        <a class="project reveal" data-reveal href="https://github.com/Spador/CrewAI_Projects" target="_blank" rel="noopener">
+          <h3>CrewAI Multi-Agent Automations <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>Five multi-agent systems — debate orchestration, autonomous coding, financial research and stock screening — coordinating LLM agents across providers.</p>
+          <p class="tags mono">CrewAI · LangGraph · MCP</p>
+        </a>
+        <a class="project reveal" data-reveal href="https://github.com/Spador/Sidekick" target="_blank" rel="noopener">
+          <h3>Sidekick <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>An agentic-coworker framework: LangGraph-powered assistant with live tool use, task evaluation and a Gradio chat interface.</p>
+          <p class="tags mono">Python · LangGraph · Gradio</p>
+        </a>
+        <div class="project reveal" data-reveal>
+          <h3>E-Commerce DevOps on EKS</h3>
+          <p>EKS clusters in custom VPCs via Terraform modules; single-click CI/CD for Java microservices with GitHub Actions and Argo CD; Route 53 + load-balancer networking.</p>
+          <p class="tags mono">Terraform · EKS · Argo CD</p>
+        </div>
+        <a class="project reveal" data-reveal href="https://github.com/Spador/Neo4J-Curriculum-Management" target="_blank" rel="noopener">
+          <h3>Neo4j Curriculum Management <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>Full-stack graph CMS with Spring Boot, React and Neo4j — RBAC and auth, with optimized Cypher queries for 40% faster retrieval.</p>
+          <p class="tags mono">Spring Boot · Neo4j · React</p>
+        </a>
+      </div>
+      <p class="section-foot reveal" data-reveal>
+        More on <a class="text-link" href="https://github.com/Spador" target="_blank" rel="noopener">github.com/Spador</a>
+      </p>
     </section>
 
-    <section class="section">
-      <h2>Certifications</h2>
-      <div id="certs" class="grid"></div>
+    <!-- ================= SKILLS ================= -->
+    <section class="section container" id="skills">
+      <p class="eyebrow reveal" data-reveal>04 — Skills</p>
+      <h2 class="reveal" data-reveal>Tools I reach for</h2>
+      <div class="skills-grid">
+        <div class="skill-group reveal" data-reveal>
+          <h3 class="mono">Languages &amp; Databases</h3>
+          <ul class="chips">
+            <li>Python</li><li>Java</li><li>SQL</li><li>TypeScript</li><li>C/C++</li><li>Bash</li>
+            <li>PostgreSQL</li><li>MongoDB</li><li>Neo4j</li><li>DynamoDB</li><li>Redis</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal" data-reveal>
+          <h3 class="mono">Cloud &amp; Infrastructure</h3>
+          <ul class="chips">
+            <li>AWS</li><li>Lambda</li><li>API Gateway</li><li>IAM</li><li>EC2 / S3 / VPC</li>
+            <li>OCI</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal" data-reveal>
+          <h3 class="mono">CI/CD &amp; DevOps</h3>
+          <ul class="chips">
+            <li>GitHub Actions</li><li>Jenkins</li><li>GitLab CI</li><li>Argo CD</li><li>Git</li><li>Jira</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal" data-reveal>
+          <h3 class="mono">AI &amp; Data</h3>
+          <ul class="chips">
+            <li>AWS Bedrock</li><li>SageMaker</li><li>CrewAI</li><li>LangGraph</li><li>MCP</li>
+            <li>Pandas</li><li>NumPy</li><li>Tableau</li><li>Power BI</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Education</h2>
-      <div id="education" class="grid"></div>
+    <!-- ================= CERTIFICATIONS & EDUCATION ================= -->
+    <section class="section container" id="credentials">
+      <div class="cred-grid">
+        <div>
+          <p class="eyebrow reveal" data-reveal>05 — Certifications</p>
+          <div class="cred-card reveal" data-reveal>
+            <h3>AWS Certified Solutions Architect – Associate</h3>
+            <p class="mono">SAA-C03 · Aug 2025 — Aug 2028</p>
+            <a class="text-link" href="https://www.credly.com/badges/f4a440de-4a0d-499a-9278-cfc97bc44dd9/public_url" target="_blank" rel="noopener">Verify on Credly ↗</a>
+          </div>
+          <div class="cred-card reveal" data-reveal>
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p class="mono">CLF-C02 · Jul 2025 — Jul 2028</p>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow reveal" data-reveal>06 — Education</p>
+          <div class="cred-card reveal" data-reveal>
+            <h3>Rochester Institute of Technology</h3>
+            <p>MS, Computer Science — GPA 3.8</p>
+            <p class="mono">Jan 2023 — May 2025 · Rochester, NY</p>
+          </div>
+          <div class="cred-card reveal" data-reveal>
+            <h3>Vellore Institute of Technology</h3>
+            <p>BS, Computer Science</p>
+            <p class="mono">Jul 2015 — Jun 2019 · Vellore, India</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section container contact" id="contact">
+      <p class="eyebrow reveal" data-reveal>07 — Contact</p>
+      <h2 class="reveal" data-reveal>Let's build something reliable.</h2>
+      <p class="lede reveal" data-reveal>
+        I'm actively interviewing for Backend, AI Engineer, DevOps and Infrastructure/Platform
+        roles. If that sounds like your team, my inbox is open.
+      </p>
+      <div class="cta-row reveal" data-reveal>
+        <a class="btn" href="mailto:sp3466@rit.edu">sp3466@rit.edu</a>
+        <button class="btn btn-ghost" id="copy-email" type="button">Copy email</button>
+        <a class="btn btn-ghost" href="assets/Shivam_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      </div>
+      <div class="cta-row reveal" data-reveal>
+        <a class="text-link" href="https://linkedin.com/in/shivam-parashar1" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="text-link" href="https://github.com/Spador" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">© <span id="year"></span> <span id="name2">Shivam Parashar</span> • Built with HTML/CSS/JS</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Shivam Parashar</p>
+      <p><a class="text-link" href="https://github.com/Spador/Shivam" target="_blank" rel="noopener">Built with vanilla HTML/CSS/JS ↗</a></p>
+    </div>
   </footer>
 
-  <script src="config.js"></script>
   <script src="script.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear(); document.getElementById('name2').textContent = (window.PORTFOLIO||{}).name||"";</script>
 </body>
 </html>
