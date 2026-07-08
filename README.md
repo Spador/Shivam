@@ -1,18 +1,31 @@
-# Shivam Parashar — Portfolio Website
+# Shivam Parashar — Portfolio
 
-This is my personal portfolio website built with **HTML, CSS, and JavaScript**, deployed on **GitHub Pages**.
+Personal portfolio, built with vanilla **HTML/CSS/JS** and deployed on **GitHub Pages**.
 
-It highlights:
-- My background in **Software Engineering, DevOps, Cloud, and Data**
-- Projects and certifications
-- Easy-to-navigate sections for skills, experience, and education
+🔗 Live: [spador.github.io/Shivam](https://spador.github.io/Shivam/)
 
-### How I built it
-- Designed a custom single-page layout (no frameworks, just clean vanilla JS/CSS).
-- Added animations (typing effect, scroll reveals) for a modern look.
-- Made the content configurable through one file: `config.js`.
-- Deployed using **GitHub Pages** for free hosting.
+## Design
 
----
+- Dark, minimal, single accent color — near-black canvas, off-white type, emerald highlights
+- Static, semantic HTML (no framework, no build step)
+- Staggered scroll-reveal animations via `IntersectionObserver`, with `prefers-reduced-motion`
+  and no-JS fallbacks
+- Fully responsive; relative asset paths so it works under the `/Shivam/` subpath
 
-🔗 Live site: [https://spador.github.io/Shivam/](https://spador.github.io/Shivam/)
+## Structure
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | All content — hero, about, experience, projects, skills, certifications, education, contact |
+| `styles.css` | Design system + layout |
+| `script.js` | Scroll reveals, mobile nav, copy-email button |
+| `assets/` | Résumé PDF, favicon, images |
+
+## Develop
+
+```sh
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+Deployed automatically by GitHub Pages from `main` (`.nojekyll`, no build).
